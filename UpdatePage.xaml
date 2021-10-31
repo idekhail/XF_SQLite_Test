@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_SQLiteDB_Test.UpdatePage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Second Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
+            <Entry Placeholder="Id" x:Name="Id" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Passworsd" x:Name="Password" BackgroundColor="Black" TextColor="White" HeightRequest="60" FontSize="20" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout BackgroundColor="LightBlue" Margin="15">
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Back" x:Name="Back"  TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+                <Button Text="Update" x:Name="Update" Clicked="Update_Clicked"  TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
