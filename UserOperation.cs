@@ -22,7 +22,7 @@ namespace XF_SQLiteDB_Test
         // Get a specific user by Id.
         public Task<Users> GetUserAsync(int id)
         {            
-            return db.Table<Users>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return db.Table<Users>().Where(i => i.UId == id).FirstOrDefaultAsync();
         }
         // Get a specific user by Username.
         public Task<Users> GetUserAsync(string username)
@@ -32,7 +32,7 @@ namespace XF_SQLiteDB_Test
 
         public Task<int> SaveUserAsync(Users user)
         {
-            if (user.Id != 0)
+            if (user.UId != 0)
             {
                 // Update an existing User.
                 return db.UpdateAsync(user);

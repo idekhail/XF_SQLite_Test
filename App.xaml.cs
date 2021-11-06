@@ -14,7 +14,7 @@ namespace XF_SQLiteDB_Test
             {
                 if (db == null)
                 {
-                    db = new UserOperation(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "UserDB.db3"));
+                    db = new UserOperation(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "UserDB1.db3"));
                 }
                 return db;
             }

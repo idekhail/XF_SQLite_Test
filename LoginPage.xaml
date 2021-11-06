@@ -6,21 +6,31 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Main Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Login Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
         <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
-            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-            <Entry Placeholder="Password" x:Name="Password" BackgroundColor="Black" PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" PlaceholderColor="White" 
+                   TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Password" x:Name="Password" BackgroundColor="Black" PlaceholderColor="White" 
+                   TextColor="White" FontSize="20" FontAttributes="Bold"/>
         </StackLayout>
         <StackLayout BackgroundColor="LightBlue" Margin="15">
-            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Go" x:Name="Go" Clicked="Go_Clicked" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
-                    <Button Text="New User" x:Name="NewUser" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                         Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Login" x:Name="Login" Clicked="Login_Clicked" TextColor="White" 
+                            BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" 
+                            FontSize="20" FontAttributes="Bold" />
+                    <Button Text="Create" x:Name="Create" TextColor="White" BackgroundColor="Brown"
+                            HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
             </StackLayout>
-            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Clear" x:Name="Clear" Clicked="Clear_Clicked" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
-                <Button Text="Close" x:Name="Close" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                         Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Update" x:Name="Update" Clicked="Update_Clicked" TextColor="White" 
+                        BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" 
+                        FontSize="20" FontAttributes="Bold" />
+                <Button Text="Close" x:Name="Close" TextColor="White" BackgroundColor="Brown" 
+                        HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
             </StackLayout>
         </StackLayout>
     </StackLayout>

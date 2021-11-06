@@ -5,21 +5,26 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Add New-User Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Create Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
         <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
-            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
-            <Entry Placeholder="Password" x:Name="Password" BackgroundColor="Black" PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Username" x:Name="Username" BackgroundColor="Black" 
+                   PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Password" x:Name="Password" BackgroundColor="Black" 
+                   PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Mobile" x:Name="Mobile" BackgroundColor="Black" 
+                   PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Entry Placeholder="Email" x:Name="Email" BackgroundColor="Black" 
+                   PlaceholderColor="White" TextColor="White" FontSize="20" FontAttributes="Bold"/>
         </StackLayout>
-        <StackLayout BackgroundColor="LightBlue" Margin="15">
-            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Add" x:Name="Add" Clicked="Add_Clicked" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold"/>
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                         Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Create" x:Name="Create" Clicked="Create_Clicked" TextColor="White" WidthRequest="120"
+                            BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
+            <Button Text="Cancel" x:Name="Cancel" TextColor="White" BackgroundColor="Brown" 
+                        HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
             </StackLayout>
-            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Back" x:Name="Back" TextColor="White" BackgroundColor="Brown" HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
-            </StackLayout>
-        </StackLayout>
     </StackLayout>
 
 </ContentPage>

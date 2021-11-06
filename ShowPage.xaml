@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_SQLiteDB_Test.ShowPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Show Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10">
+            <Label Text="Username" x:Name="Username" BackgroundColor="Black" 
+                   TextColor="White" FontSize="20" FontAttributes="Bold"/>
+            <Label Text="ShowMe" x:Name="ShowMe" BackgroundColor="Black" HeightRequest="200"
+                   TextColor="White" FontSize="20" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <ListView x:Name="myListView" HasUnevenRows="True" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding UId}" Detail="{Binding Username}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+        <StackLayout BackgroundColor="LightBlue" Margin="15">
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                         Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="CallMe" x:Name="CallMe" Clicked="CallMe_Clicked"  TextColor="White" WidthRequest="120"
+                        BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
+                <Button Text="MailMe" x:Name="MailMe" Clicked="MailMe_Clicked"   TextColor="White" WidthRequest="120"
+                        BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="AntiqueWhite" Margin="15" Padding="10" Spacing="10" 
+                         Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="AllUsers" x:Name="AllUsers" Clicked="AllUsers_Clicked"  TextColor="White" WidthRequest="120"
+                        BackgroundColor="Brown" HorizontalOptions="Center"  FontSize="20" FontAttributes="Bold"/>
+                <Button Text="Logout" x:Name="Logout" TextColor="White" BackgroundColor="Brown" 
+                        HorizontalOptions="Center" WidthRequest="120" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

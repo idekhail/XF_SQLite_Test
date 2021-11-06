@@ -9,14 +9,36 @@ namespace XF_SQLiteDB_Test
         {
             InitializeComponent();
             Close.Clicked += (s, e) => Environment.Exit(0);
-            NewUser.Clicked += (s, e) => Navigation.PushAsync(new CreatePage());
+            Create.Clicked += (s, e) => Navigation.PushAsync(new CreatePage());
         }
-        private async void Go_Clicked(object sender, EventArgs e)
+        private async void Login_Clicked(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(Username.Text))
             {
                 var user =  await App.UserSQLite.GetUserAsync(Username.Text);
                 if(user != null)
+                {
+                    if (user.Password == Password.Text)
+                    {
+                        await Navigation.PushAsync(new ShowPage(user));
+                    }
+                    else
+                        await DisplayAlert("Error", "Password  is error", "Ok");
+
+                }
+                else
+                    await DisplayAlert("Error", "Username is error", "Ok");
+            }
+            else
+                await DisplayAlert("Error", "Username is empty", "Ok");
+        }
+
+        private async void Update_Clicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Username.Text))
+            {
+                var user = await App.UserSQLite.GetUserAsync(Username.Text);
+                if (user != null)
                 {
                     if (user.Password == Password.Text)
                     {
@@ -33,11 +55,6 @@ namespace XF_SQLiteDB_Test
                 await DisplayAlert("Error", "Username is empty", "Ok");
         }
 
-        private void Clear_Clicked(object sender, EventArgs e)
-        {
-            Username.Text = string.Empty;
-            Password.Text = "";
-        }
         protected override void OnAppearing()
         {
             base.OnAppearing();

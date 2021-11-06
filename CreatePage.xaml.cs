@@ -10,18 +10,20 @@ namespace XF_SQLiteDB_Test
         public CreatePage()
         {
             InitializeComponent();
-            Back.Clicked += (s, e) => Navigation.PopAsync();
+            Cancel.Clicked += (s, e) => Navigation.PopAsync();
 
         }
 
-        private async void Add_Clicked(object sender, EventArgs e)
+        private async void Create_Clicked(object sender, EventArgs e)
         {
             if ((!string.IsNullOrEmpty(Username.Text)) && (await App.UserSQLite.GetUserAsync(Username.Text) == null))
             {
-                Users user = new Users()
+                var user = new Users()
                 {
                     Username = Username.Text,
-                    Password = Password.Text
+                    Password = Password.Text,
+                    Mobile = Mobile.Text,
+                    Email = Email.Text
                 };
                 await App.UserSQLite.SaveUserAsync(user);
                 await DisplayAlert("Done", "Username is added", "Ok");
